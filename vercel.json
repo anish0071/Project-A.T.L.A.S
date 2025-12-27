@@ -1,0 +1,19 @@
+{
+  "buildCommand": "pip install -r requirements.txt",
+  "devCommand": "streamlit run app.py",
+  "env": {
+    "STREAMLIT_SERVER_PORT": "8501",
+    "STREAMLIT_SERVER_ADDRESS": "0.0.0.0"
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ]
+}
